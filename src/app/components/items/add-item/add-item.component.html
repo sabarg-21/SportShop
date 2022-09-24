@@ -1,0 +1,34 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Item</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addItem()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Item Name</label>
+                  <input type="text" class="form-control" id="name"
+                  name="name" [(ngModel)]="addItemRequest.itemName">
+                </div>
+                <div class="mb-3">
+                    <label for="value" class="form-label">Item value</label>
+                    <input type="value" class="form-control" id="value"
+                    name="value" [(ngModel)]="addItemRequest.itemvalue">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="color" class="form-label">Item color</label>
+                    <input type="value" class="form-control" id="color"
+                    name="color" [(ngModel)]="addItemRequest.itemcolor">
+                  </div>
+                  <div class="mb-3">
+                    <label for="size" class="form-label">Item size</label>
+                    <input type="value" class="form-control" id="size"
+                    name="size" [(ngModel)]="addItemRequest.itemSize">
+                  </div>
+                
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+   
+</div>

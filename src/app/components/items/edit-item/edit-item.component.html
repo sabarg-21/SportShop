@@ -1,0 +1,40 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Item</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateItem()">
+                <div class="mb-3">
+                    <label for="itemId" class="form-label">Item Id</label>
+                    <input type="text" class="form-control" id="itemId" readonly
+                    name="itemId" [(ngModel)]="itemDetails.itemId">
+                  </div>
+                <div class="mb-3">
+                  <label for="itemName" class="form-label">Item Name</label>
+                  <input type="text" class="form-control" id="itemName"
+                  name="itemName" [(ngModel)]="itemDetails.itemName">
+                </div>
+                <div class="mb-3">
+                    <label for="itemvalue" class="form-label">Item value</label>
+                    <input type="value" class="form-control" id="itemvalue"
+                    name="itemvalue" [(ngModel)]="itemDetails.itemvalue">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="itemcolor" class="form-label">Item color</label>
+                    <input type="value" class="form-control" id="itemcolor"
+                    name="itemcolor" [(ngModel)]="itemDetails.itemcolor">
+                  </div>
+                  <div class="mb-3">
+                    <label for="itemSize" class="form-label">Item size</label>
+                    <input type="value" class="form-control" id="itemSize"
+                    name="itemSize" [(ngModel)]="itemDetails.itemSize">
+                  </div>
+                
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-danger" (click)="deleteItem(itemDetails.itemId)">Delete</button>
+            </form>
+        </div>
+    </div>
+   
+</div>
